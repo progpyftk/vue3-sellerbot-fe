@@ -8,6 +8,7 @@ RUN npm run build
 
 # Stage 2: Set up Nginx
 FROM nginx:stable-alpine as production-stage
-COPY --from=build-stage /app/dist /usr/share/nginx/html
-EXPOSE 80
+WORKDIR /usr/share/nginx/html
+RUN rm -rf ./*
+COPY dist .
 CMD ["nginx", "-g", "daemon off;"]
