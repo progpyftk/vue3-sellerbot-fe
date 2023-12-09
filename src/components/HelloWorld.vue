@@ -2,7 +2,7 @@
   <v-container class="fill-height">
     <v-responsive class="align-center text-center fill-height">
       <v-img height="300" src="@/assets/logo.svg" />
-
+      testando em production
       <div class="text-body-2 font-weight-light mb-n1">Welcome to</div>
 
       <h1 class="text-h2 font-weight-bold">Vuetify</h1>
