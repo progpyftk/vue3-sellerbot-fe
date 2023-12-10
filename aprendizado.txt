@@ -1,0 +1,7 @@
+1. ao criar o app no digital ocean tem que colocar pra usar o dockerfile
+2. não pode colocar o dist no gitignore
+3. o digitalocean app escuta na porta 8080
+# Substitua a porta padrão do Nginx (80) pela porta 8080
+RUN sed -i 's/listen       80;/listen       8080;/g' /etc/nginx/conf.d/default.conf
+EXPOSE 8080
+CMD ["nginx", "-g", "daemon off;"]
