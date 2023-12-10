@@ -38,6 +38,7 @@ export default defineComponent({
         { title: "Login", icon: "mdi-login", router_name: "/login" },
         { title: "Contas", icon: "mdi-playlist-edit", router_name: "/accounts" },
         { title: "Frete Grátis", icon: "mdi-truck-fast", router_name: "/free-shipping" },
+        { title: "Full Sem Estoque", icon: "mdi-package-variant", router_name: "/no-stock-fulfillment" },
       ],
     };
   },

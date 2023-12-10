@@ -24,6 +24,12 @@ const routes = [
         component: () =>
           import("../components/FreeShipping.vue"),
       },
+      {
+        path: "/no-stock-fulfillment",
+        name: "no-stock-fulfillment",
+        component: () =>
+          import("../components/NoStockFulfillment.vue"),
+      },
     ],
   },
 ]
