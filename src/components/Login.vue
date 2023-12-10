@@ -114,7 +114,7 @@
   
         if (this.isFormValid) {
           this.logging = true;
-          axios.post(this.$store.state.backend_url + '/login', {
+          axios.post(import.meta.env.VITE_BACKEND_URL + '/login', {
             user: {
               email: this.email,
               password: this.password,

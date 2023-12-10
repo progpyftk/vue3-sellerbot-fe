@@ -147,7 +147,7 @@
         console.log('--- auth token ---')
         console.log(this.$store.state.authToken)
         axios
-          .get(this.$store.state.backend_url + "/seller/index",
+          .get(import.meta.env.VITE_BACKEND_URL + "/seller/index",
             {
               headers: {
                 'Content-Type': 'application/json;charset=UTF-8',
@@ -183,7 +183,7 @@
         console.log('Token atual:');
         console.log(this.$store.state.authToken);
         axios
-          .post(this.$store.state.backend_url + "/seller/create",
+          .post(import.meta.env.VITE_BACKEND_URL + "/seller/create",
             {
               seller: {
                 nickname: this.editedItem.nickname,
@@ -212,7 +212,7 @@
       editSeller() {
         console.log("Fazendo o update do seller");
         axios
-          .post(this.$store.state.backend_url + "/seller/edit",
+          .post(import.meta.env.VITE_BACKEND_URL + "/seller/edit",
             {
               seller: {
                 nickname: this.editedItem.nickname,
@@ -243,7 +243,7 @@
       deleteSeller() {
         console.log(this.editedItem.ml_seller_id);
         axios
-          .post(this.$store.state.backend_url + "/seller/delete",
+          .post(import.meta.env.VITE_BACKEND_URL + "/seller/delete",
             { seller: { ml_seller_id: this.editedItem.ml_seller_id, } },
             { headers: { Authorization: this.$store.state.authToken } }
           )
