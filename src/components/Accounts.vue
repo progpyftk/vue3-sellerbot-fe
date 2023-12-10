@@ -17,7 +17,7 @@
               <v-spacer></v-spacer>
               <v-dialog v-model="dialog" max-width="500px">
                 <template v-slot:activator="{ on, attrs }">
-                  <v-btn color="primary" dark class="mb-2" v-bind="attrs" v-on="on">
+                  <v-btn color="primary" dark class="mb-2" v-bind="attrs" v-on="on" @click="openAddAccount">
                     Add Account
                   </v-btn>
                 </template>
@@ -37,7 +37,6 @@
                           <v-text-field v-model="editedItem.code" label="Code"></v-text-field>
                           <v-text-field v-if="editedIndex > -1" v-model="editedItem.access_token"
                             label="Acess Token"></v-text-field>
-  
                           <v-text-field v-if="editedIndex > -1" v-model="editedItem.refresh_token"
                             label="Refresh Token"></v-text-field>
                         </v-col>
@@ -278,6 +277,10 @@
         this.editedItem = Object.assign({}, item);
         console.log(this.editedItem.ml_seller_id);
         this.dialogDelete = true;
+      },
+      openAddAccount() {
+        this.dialog = true;
+        console.log("abrindo addAccount")
       },
       closeDelete() {
         this.dialogDelete = false;
