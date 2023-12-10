@@ -18,6 +18,12 @@ const routes = [
         component: () =>
           import("../components/Accounts.vue"),
       },
+      {
+        path: "/free-shipping",
+        name: "freeshipping",
+        component: () =>
+          import("../components/FreeShipping.vue"),
+      },
     ],
   },
 ]

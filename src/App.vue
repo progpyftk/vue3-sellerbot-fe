@@ -16,11 +16,9 @@
       <v-toolbar-title>
         SellerBot v1.0.0 <v-icon icon="mdi-home" />
       </v-toolbar-title>
-      <!-- <v-spacer></v-spacer>
+      <v-spacer></v-spacer>
       User: {{ $store.state.currentUser }}
       <v-spacer></v-spacer>
-      Database: {{ this.$store.state.databaseUpdate }}
-      <v-spacer></v-spacer>-->
     </v-app-bar>
 
     <v-main>
@@ -38,8 +36,8 @@ export default defineComponent({
       selectedItem: null,
       items: [
         { title: "Login", icon: "mdi-login", router_name: "/login" },
-        { title: "Contas", icon: "mdi-login", router_name: "/accounts" },
-        { title: "Lodasdasdgin", icon: "mdi-login", router_name: "/login" },
+        { title: "Contas", icon: "mdi-playlist-edit", router_name: "/accounts" },
+        { title: "Frete Grátis", icon: "mdi-truck-fast", router_name: "/free-shipping" },
       ],
     };
   },
