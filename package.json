@@ -8,6 +8,8 @@
   },
   "dependencies": {
     "@mdi/font": "^7.3.67",
+    "actioncable": "^5.2.8-1",
+    "actioncable-vue": "^2.5.1",
     "axios": "^1.6.2",
     "moment": "^2.29.4",
     "roboto-fontface": "*",

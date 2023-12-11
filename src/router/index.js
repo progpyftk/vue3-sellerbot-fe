@@ -30,6 +30,12 @@ const routes = [
         component: () =>
           import("../components/NoStockFulfillment.vue"),
       },
+      {
+        path: "/deals",
+        name: "deals",
+        component: () =>
+          import("../components/Deals.vue"),
+      },
     ],
   },
 ]
